@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<h1>Introduction</h1>
+<p><%= paragraphHome %></p>
+
+<h2>Posts</h2>
+<% post.forEach(function(ptc){ %>
+    <h3><%= ptc.title %></h3>
+    <p><%= ptc.content.substring(0,100); %>... <a href="/post/<%= ptc._id %>">Read More</a></p>
+<% }); %>
+
+<%- include("partials/footer") -%>
